@@ -30,7 +30,7 @@ export default async function handler(req, res) {
       // await sendMail({ ...payment.data, buy_order });
     }
     res.status(301)
-    res.setHeader("Location", `/estado?token=${token}`)
+    res.setHeader("Location", `/resultado/${token}`)
     res.end()
   } else {
     if (!token && !tbkToken) {
